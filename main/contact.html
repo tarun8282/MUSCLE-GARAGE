@@ -1,22 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>CONTAC_US</title>
-  </head>
-  <body background="Images/contact img.png">
-    <div class="contact-form">
-      <span class="heading">Contact Us</span>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" required="" />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required="" />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required=""></textarea>
-        <button type="submit">Submit</button>
-      </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+        
+        font-family: Arial, sans-serif;
+             margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 10px;
+            background-color: #7e1616;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            height: auto;
+            border-radius: 2.5cm;
+        }
+
+        h1 {
+            color: #000000;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            color: #000000;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #b91919;
+        }
+
+        .social-media {
+            text-align: center;
+            text-shadow: #333;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .social-media a:hover {
+            color: #0d0e0d;
+        }
+ .heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+    background-color: #ddd;
+    
+}
+.footercontainer{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+.footercontainer a{
+    color: #0d0e0d;
+    font-size: 20px;
+    opacity: 1;
+    text-decoration: none;
+    margin: 20px;
+
+}
+
+.footercontainer a:hover{
+    opacity: 2;
+    color: #706b6b;
+}
+    </style>
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="heading">
+        <img style="margin-right: 15px;" width="300px" height="150px" src="Images/LOGO_01.jpg" alt="Logo">
+        </p>
     </div>
-  </body>
+    </header>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Fill out the form below to get in touch.</p>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <a href="https://www.instagram.com" target="_blank">📷</a>
+            <a href="https://www.facebook.com" target="_blank">📘</a>
+            <a href="https://www.twitter.com" target="_blank">🐦</a>
+            <a href="https://www.linkedin.com" target="_blank">🔗</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footercontainer">
+<a href="index.html">Home</a>
+<a href="contact.html">Contact Us</a>
+<a href="about.html">About Us</a>
+<a href="blog.html">Blogs</a>
+        </div>
+         <p>• Legal: Terms of Service | Privacy Policy</p>
+         <p>Copyright &copy;2024; Designed by Muscle Team</p>
+</footer>
+<body background="Images/Bg-new.png"></body>
+</body>
 </html>
