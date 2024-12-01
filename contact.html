@@ -120,6 +120,18 @@ footer{
     <link rel="icon" href="Images/favicon.png" type="image/x-icon">
 </head>
 <body>
+       <script>
+        function validateForm() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            if (!name || !email) {
+                alert("Please fill out both Name and Email fields.");
+            } else {
+                alert("Form submitted successfully!");
+            }
+        }
+    </script>
     <header>
         <div class="heading">
         <img style="margin-right: 10px;border-radius: 20px; margin-top: 10px; " width="170px" height="110px" src="Images/LOGO_01.jpg" alt="Logo">
@@ -158,7 +170,7 @@ footer{
 <a href="index.html">Home</a>
 <a href="contact.html">Contact Us</a>
 <a href="about.html">About Us</a>
-<a href="blog.html">Blogs</a>
+<a href="services.html">Services</a>
         </div>
          <p>• Legal: Terms of Service | Privacy Policy</p>
          <p>Copyright &copy;2024; Designed by Muscle Team</p>
