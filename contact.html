@@ -120,18 +120,27 @@ footer{
     <link rel="icon" href="Images/favicon.png" type="image/x-icon">
 </head>
 <body>
-       <script>
+    <script>
         function validateForm() {
             const name = document.getElementById("name").value.trim();
             const email = document.getElementById("email").value.trim();
 
-            if (!name || !email) {
-                alert("Please fill out both Name and Email fields.");
-            } else {
-                alert("Form submitted successfully!");
+            if (!name) {
+                alert("Please enter your Name.");
+                return; 
             }
+
+            if (!email) {
+                alert("Please enter your Email.");
+                return; 
+            }
+
+            alert("Form submitted successfully!");
+           
         }
     </script>
+
+       
     <header>
         <div class="heading">
         <img style="margin-right: 10px;border-radius: 20px; margin-top: 10px; " width="170px" height="110px" src="Images/LOGO_01.jpg" alt="Logo">
@@ -144,16 +153,16 @@ footer{
         <form action="#" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
             </div>
             <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
+                <textarea id="message" name="message" rows="5"></textarea>
+        </div>
             <button type="submit">Send Message</button>
         </form>
         
