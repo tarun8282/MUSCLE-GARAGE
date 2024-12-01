@@ -121,23 +121,20 @@ footer{
 </head>
 <body>
     <script>
-        function validateForm() {
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
+         function validateform() {
+          var name = document.myform.name.value;
+          var name = document.myform.email.value;
+         
+          if (name == null || name == "") {
+            alert("Name can't be blank");
+            return false;
+          }
+           if (email == null || email == "") {
+               alert("Email cant't be blank");
+               return false;
+           }
+       }
 
-            if (!name) {
-                alert("Please enter your Name.");
-                return; 
-            }
-
-            if (!email) {
-                alert("Please enter your Email.");
-                return; 
-            }
-
-            alert("Form submitted successfully!");
-           
-        }
     </script>
 
        
@@ -150,6 +147,7 @@ footer{
     <div class="container">
         <h1>Contact Us</h1>
         <p>We'd love to hear from you! Fill out the form below to get in touch.</p>
+        <form name="myform" onsubmit="return validateform()">   
         <form action="#" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
