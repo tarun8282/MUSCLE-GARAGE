@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
+        nav {
+          
+                    /* Padding around items */
+    display: flex;
+    align-items: center;
+    justify-content: center;      /* Centers the content horizontally */
+    white-space: nowrap;          /* Prevents wrapping to a new line */
+}
+
+/* Navbar links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;                 /* Space between each link */
+}
+
+.nav-links a {
+    color: #fff;                  /* Link color */
+    text-decoration: none;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #ddd;
+}
         
         body {
         
@@ -137,7 +164,16 @@ footer{
 
     </script>
 
-       
+        <nav>
+    <!-- Navigation links -->
+    <ul class="nav-links">
+        <b><li><a href="index.html">Home</a></li></b>
+        <b><li><a href="about.html">About Us</a></li></b>
+        <b><li><a href="contact.html">Contact Us</a></li></b>
+        <b><li><a href="services.html">Services</a></li></b>
+    
+    </ul>
+</nav>
     <header>
         <div class="heading">
         <img style="margin-right: 10px;border-radius: 20px; margin-top: 10px; " width="170px" height="110px" src="Images/LOGO_01.jpg" alt="Logo">
