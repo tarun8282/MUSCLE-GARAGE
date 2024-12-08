@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle-Garage</title>
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    
+  
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: #615d5db0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #28a745;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+ul li {
+    margin-bottom: 8px;
+    color: white;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.heading h1
+{
+    font-weight: 550px;
+}
+
+h1 {
+  color: #000000;
+  justify-content: center;
+  text-align: center;
+  font-size: 60px;
+}
+
+p {
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+nav {
+          
+                   
+    display: flex;
+    align-items: center;
+    justify-content: center;      
+    white-space: nowrap;          
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;                
+}
+
+.nav-links a {
+    color: #fff;                  
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #ddd;
+}
+    </style>
+</head>
+<body background="Images/Bg-new.png"></body>
+<body>
+    <header>
+        <header>
+            <div class="heading">
+            <img style="margin-right: 10px;border-radius: 20px; margin-top: 10px; " width="170px" height="110px" src="Images/LOGO_01.jpg" alt="Logo">
+            </p>
+                <h1 style="font-size: 50px;  color: aliceblue; "> Muscle-Garage</h1>
+        </div>
+        </header>
+        <hr>
+            <nav>
+        <!-- Navigation links -->
+        <ul class="nav-links">
+            <b><li><a href="index.html">Home</a></li></b>
+            <b><li><a href="about.html">About Us</a></li></b>
+            <b><li><a href="contact.html">Contact Us</a></li></b>
+            <b><li><a href="services.html">Services</a></li></b>
+            <b><li><a href="plans.html">Plans</a></li></b>
+        
+        </ul>
+    </nav>
+    <hr>
+    </header>
+            <h1>Transform Your Body at Muscle-Garage</h1>
+            <p>Your fitness journey starts with us. Join today to achieve your health and fitness goals.</p>
+</div>
+    <main>
+        <div class="plan" id="basic-plan">
+            <h2>Basic Plan</h2>
+            <p class="price">₹3000/month</p>
+            <ul>
+                <li>Access to gym equipment</li>
+                <li>Locker facility</li>
+                <li>No personal trainer</li>
+            </ul>
+            <button onclick="payNow('Basic Plan', 3000)">Pay ₹3000</button>
+        </div>
+        <div class="plan" id="standard-plan">
+            <h2>Standard Plan</h2>
+            <p class="price">₹4000/month</p>
+            <ul>
+                <li>Access to gym equipment</li>
+                <li>Locker facility</li>
+                <li>Group fitness classes</li>
+            </ul>
+            <button onclick="payNow('Standard Plan', 4000)">Pay ₹4000</button>
+        </div>
+        <div class="plan" id="premium-plan">
+            <h2>Premium Plan</h2>
+            <p class="price">₹5000/month</p>
+            <ul>
+                <li>Access to gym equipment</li>
+                <li>Personal locker</li>
+                <li>Personal trainer</li>
+            </ul>
+            <button onclick="payNow('Premium Plan', 5000)">Pay ₹5000</button>
+        </div>
+    </main>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+        function payNow(planName, amount) {
+  const options = {
+      key: "", // Replace with your Razorpay API Key
+      amount: amount * 100,        // Amount in paise (1 INR = 100 paise)
+      currency: "INR",
+      name:"Muscle-Garage",
+      description: Payment for ${planName},
+      handler: function (response) {
+          alert(Payment successful! Payment ID: ${response.razorpay_payment_id});
+      }
+      prefill: {
+          name: "",   
+          email: "",  
+          contact: ""
+      }
+      theme: {
+          color: "#007bff"
+      }
+    }
+
+  const razorpay = new Razorpay(options);
+  razorpay.open();
+
+  
+  razorpay.on("payment.failed", function (response) {
+      alert(Payment failed! Reason: ${response.error.description});
+  });
+}
+    </script>
+
+</body>
+</html>
