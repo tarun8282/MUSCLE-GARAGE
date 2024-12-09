@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: url("Images/Bg 2.png");
+            .heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:1.5cm
+    
+   
+}
+.heading h1
+{
+    font-weight: 550px;
+}
+        }
+        /* Navigation bar */
+        .navbar {
+          
+                    
+    display: flex;
+    align-items: center;
+    justify-content: center;     
+    white-space: nowrap;        
+}
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+    .navbar a:hover {
+            color: #706b6b;
+           
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .services-tag {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 50px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .content {
+            width: 55%; /* Adjust width as needed */
+        }
+        .content h2 {
+            color: #333;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            color: #555;
+            font-size:15px;
+            line-height: 1.8;
+        }
+        .section img {
+            width: 40%; /* Adjust width as needed */
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+    text-align: center;
+    background-color: #ddd;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+footer p {
+    margin: 5px 0;
+}
+    </style>
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon">
+</head>
+<body>
+     <header>
+        <div class="heading">
+        <img style="margin-right: 15px;" width="103px" height="69px" src="Images/LOGO_01.jpg" alt="Logo">
+        <p>
+<h1 style="font-size: 50px;  color: aliceblue; "> Muscle-Garage</h1>
+        </p>
+    </div>
+    </header>
+    <!-- Navigation Bar -->
+     <hr>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="services.html">Services</a>
+        <a href="plans.html">Plans<a/>
+        
+    </div>
+    <hr>
+
+    <div class="container">
+        <!-- Yoga Section -->
+        <div class="section">
+            <div class="services-tag">SERVICES</div>
+            <div class="content-wrapper">
+                <div class="content">
+                    <h2>Yoga</h2>
+                    <p><strong>Types of Classes:</strong> Traditional and modern yoga.</p>
+                    <p><strong>Benefits:</strong> Improves flexibility, stress management, and posture.</p>
+                    <p><strong>Ideal For:</strong> Beginners to advanced learners. Classes include guided sessions on breathing techniques and mindfulness.</p>
+                </div>
+                <img src="Images/YOGA.png" alt="Yoga Image">
+            </div>
+        </div>
+
+        <!-- Personal Training Section -->
+        <div class="section">
+            <div class="services-tag">SERVICES</div>
+            <div class="content-wrapper">
+                <div class="content">
+                    <h2>Personal Training</h2>
+                    <p><strong>Customized Programs:</strong> Tailored plans for strength gain, weight loss, or overall fitness improvement.</p>
+                    <p><strong>Equipment:</strong> State-of-the-art gym machines, weights, and facilities.</p>
+                    <p><strong>Progress Tracking:</strong> Regular assessments and goal-setting with certified trainers.</p>
+                </div>
+                <img src="Images/PT.png" alt="Personal Training Image">
+            </div>
+        </div>
+
+        <!-- Swimming Section -->
+        <div class="section">
+            <div class="services-tag">SERVICES</div>
+            <div class="content-wrapper">
+                <div class="content">
+                    <h2>Swimming</h2>
+                    <p><strong>Facilities:</strong> Indoor and outdoor pools with dedicated lanes for recreation and training.</p>
+                    <p><strong>Benefits:</strong> Full-body workout, stress relief, and cardio improvement.</p>
+                    <p><strong>For All Levels:</strong> Suitable for beginners to advanced swimmers, with certified instructors available.</p>
+                </div>
+                <img src="Images/SWMMING POOL.png" alt="Swimming Image">
+            </div>
+        </div>
+    </div>
+     <footer>
+        <p>• About Us: Empowering all fitness levels with top-tier equipment and expert trainers.</p>
+        <p>• Quick Links: Home | About Us | Classes | Personal Training | Memberships | Contact | FAQs</p>
+        <p>• Contact: 123 Fitness Ave, City | (123) 456-7890 | info@musclegarage.com</p>
+        <p>• Follow Us: Facebook | Instagram | Twitter | LinkedIn</p>
+        <p>• Hours: Mon-Fri 6AM-10PM | Sat 8AM-8PM | Sun Closed</p>
+        <p>• Legal: Terms of Service | Privacy Policy</p>
+    </footer>
+</body>
+</html>
