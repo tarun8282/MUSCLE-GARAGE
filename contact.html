@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        nav {
+          
+                    /* Padding around items */
+    display: flex;
+    align-items: center;
+    justify-content: center;      /* Centers the content horizontally */
+    white-space: nowrap;          /* Prevents wrapping to a new line */
+}
+
+/* Navbar links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;                 /* Space between each link */
+}
+
+.nav-links a {
+    color: #fff;                  /* Link color */
+    text-decoration: none;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #ddd;
+}
+        
+        body {
+        
+        font-family: Arial, sans-serif;
+             margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 425px;
+            margin: 30px auto;
+            padding: 10px;
+            background-color: #615d5db0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            height: auto;
+            border-radius: 1.5cm;
+            o
+        }
+
+        h1 {
+            color: #000000;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            color: #000000;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            
+            width: 70%;
+            margin-left: 63px;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #b91919;
+        }
+
+        .social-media {
+            text-align: center;
+            text-shadow: #333;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .social-media a:hover {
+            color: #0d0e0d;
+        }
+ .heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5cm;
+}
+footer{
+    background-color: #ddd;
+    
+}
+.footercontainer{
+    text-align: center;
+    background-color: #ddd;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.footercontainer {
+    margin: 5px 0;
+}
+    
+}
+.footercontainer a{
+    color: #0d0e0d;
+    font-size: 20px;
+    opacity: 1;
+    text-decoration: none;
+    margin: 20px;
+
+}
+
+.footercontainer a:hover{
+    opacity: 2;
+    color: #706b6b;
+}
+    </style>
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <script>
+         function validateform() {
+          var name = document.myform.name.value;
+          var email = document.myform.email.value;
+         
+          if (name == null || name == "") {
+            alert("Name can't be blank");
+            return false;
+          }
+           if (email == null || email == "") {
+               alert("Email cant't be blank");
+               return false;
+           }
+       }
+
+    </script>
+    <header>
+        <div class="heading">
+        <img style="margin-right: 10px;border-radius: 20px; margin-top: 10px; " width="170px" height="110px" src="Images/LOGO_01.jpg" alt="Logo">
+        </p>
+            <h1 style="font-size: 50px;  color: aliceblue; "> Muscle-Garage</h1>
+    </div>
+    </header>
+    <hr>
+        <nav>
+    <!-- Navigation links -->
+    <ul class="nav-links">
+        <b><li><a href="index.html">Home</a></li></b>
+        <b><li><a href="about.html">About Us</a></li></b>
+        <b><li><a href="contact.html">Contact Us</a></li></b>
+        <b><li><a href="services.html">Services</a></li></b>
+         <b><li><a href="plans.html">Plans</a></li></b>
+    
+    </ul>
+</nav>
+<hr>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Fill out the form below to get in touch.</p>
+        <form name="myform" onsubmit="return validateform()">   
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+            <button type="submit">Send Message</button>
+        </form>
+        
+      <div class="social-media">
+    <h2>Follow Us</h2>
+    <a href="https://www.instagram.com" target="_blank">
+        <img src="Images/instagram.png" alt="Instagram" width="30" height="30">
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="Images/facebook.png" alt="Facebook" width="30" height="30">
+    </a>
+    <a href="https://www.twitter.com" target="_blank">
+        <img src="Images/twitter.png" alt="Twitter" width="30" height="30">
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+        <img src="Images/linkedin.png" alt="LinkedIn" width="30" height="30">
+    </a>
+</div>
+
+    </div>
+    <footer>
+    <p>• About Us: Empowering all fitness levels with top-tier equipment and expert trainers.</p>
+    <p>• Quick Links: Home | About Us | Classes | Personal Training | Memberships | Contact | FAQs</p>
+    <p>• Contact: 123 Fitness Ave, City | (123) 456-7890 | info@musclegarage.com</p>
+    <p>• Follow Us: Facebook | Instagram | Twitter | LinkedIn</p>
+    <p>• Hours: Mon-Fri 6AM-10PM | Sat 8AM-8PM | Sun Closed</p>
+    <p>• Legal: Terms of Service | Privacy Policy</p>
+</footer>
+<body background="Images/Bg-new.png"></body>
+</body>
+</html>
+  
